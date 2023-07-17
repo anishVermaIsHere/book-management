@@ -1,0 +1,138 @@
+<div class="mb-4 d-flex justify-content-end">
+  <button type="button" class="btn btn-primary px-4" (click)="addBook()">
+    Add book
+  </button>
+</div>
+
+<div class="mx-auto" *ngIf="formActive">
+  <div class="form-container">
+    <div class="modal-header">
+      <h1 class="modal-title fs-5" id="exampleModalLabel">Add Book</h1>
+      <button
+        type="button"
+        class="btn-close"
+        (click)="onClose()"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div class="modal-body">
+      <form [formGroup]="bookForm" (ngSubmit)="isUpdate ? onUpdate() : onAdd()">
+        <div class="row mb-4">
+          <div class="col-12 col-lg">
+            <div class="form-outline">
+              <label class="form-label" for="title">Title</label>
+              <input
+                type="text"
+                id="title"
+                class="form-control"
+                formControlName="title"
+                #title
+              />
+            </div>
+          </div>
+          <div class="col-12 col-lg">
+            <div class="form-outline">
+              <label class="form-label" for="author">Author</label>
+              <input
+                type="text"
+                id="author"
+                class="form-control"
+                formControlName="author"
+                #author
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row mb-4">
+          <div class="col-12">
+            <label class="form-label" for="customFile">Upload Book Cover</label>
+            <input
+              type="file"
+              class="form-control"
+              id="customFile"
+              disabled
+              #image
+            />
+          </div>
+
+        </div>
+
+        <div class="form-outline mb-4">
+          <label class="form-label" for="description">Description</label>
+          <textarea
+            class="form-control"
+            id="description"
+            formControlName="description"
+            rows="4"
+            #description
+          ></textarea>
+        </div>
+
+        <div class="row mb-4">
+          <div class="col-12 col-lg">
+            <div class="form-outline mb-4">
+              <label class="form-label" for="language">Language</label>
+              <select
+                class="form-select"
+                id="language"
+                aria-label="Select language"
+                formControlName="language"
+                #language
+              >
+                <option selected value="English">English</option>
+                <option value="Hindi">Hindi</option>
+                <option value="Arabic">Arabic</option>
+                <option value="French">French</option>
+                <option value="Russian">Russian</option>
+                <option value="Japanese">Japanese</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-lg">
+            <div class="form-outline">
+              <label class="form-label" for="year">Year</label>
+              <input
+                type="number"
+                id="year"
+                class="form-control"
+                formControlName="year"
+                #year
+              />
+            </div>
+          </div>
+
+          <div class="col-12 col-lg">
+            <div class="form-outline">
+              <label class="form-label" for="price">Price</label>
+              <input
+                type="number"
+                id="price"
+                class="form-control"
+              formControlName="price"
+                #price
+              />
+            </div>
+          </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-end py-3">
+            <button
+              *ngIf="isUpdate; else addBtn"
+              type="submit"
+              class="btn btn-primary px-4"
+            >
+              Update
+            </button>
+            <ng-template #addBtn>
+              <button
+              [disabled]="bookForm.invalid"
+              type="submit" class="btn btn-primary px-4">Add</button>
+      
+            </ng-template>
+          </div>
+      </form>
+    </div>
+  
+  </div>
+</div>

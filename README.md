@@ -14,12 +14,17 @@
 
 6. Now your app will start successfully.
 
+<<<<<<< HEAD
+
+
+=======
 **Screenshots**
 ![scrnli_7_17_2023_11-14-52 PM](https://github.com/anishVermaIsHere/book-management/assets/97972189/ced49949-bb3b-4b89-9217-2d3ded0af759)
 
 ![scrnli_7_17_2023_11-16-15 PM](https://github.com/anishVermaIsHere/book-management/assets/97972189/45aaedc1-668d-4223-81cb-3bba933d80ac)
 
 ![scrnli_7_17_2023_11-17-12 PM](https://github.com/anishVermaIsHere/book-management/assets/97972189/08b0da72-f2e8-41d0-9f48-96d2f7db6670)
+>>>>>>> f69ddd1d10675ffbb3e0fe12d3c9566ebee5208c
 
 # Additional Information - Angular 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.

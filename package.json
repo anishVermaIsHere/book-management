@@ -1,6 +1,8 @@
 {
   "name": "bookmanagerapp",
   "version": "0.0.0",
+  "author":"Anish Verma",
+  "github_link":"https://github.com/anishVermaIsHere/book-management",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

@@ -1,0 +1,16 @@
+ <div class="col-12">
+  <div class="book-card gap-4" *ngFor="let book of booklist">
+    <img [src]="book.imageLink" class="card-img-top" [alt]="book.title" style="height:230px">
+    <div class="card-body mt-2">
+      <div class="d-flex justify-content-between align-items-center">
+        <h5 class="card-title">{{book.title}}</h5>
+        <p class="book-price fs-6 m-0">${{book.price}}</p>
+      </div>
+      
+      <p class="book-author fs-6 mt-1">{{book.author}}</p>
+      <!-- <span class="mt-1">{{book.pages}} pages</span> -->
+      
+      <p class="book-description mt-2">{{book.description}}</p>
+    </div>
+  </div>
+ </div>

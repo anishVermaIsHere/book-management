@@ -1,0 +1,22 @@
+
+.brand-title {
+    padding:6px 12px;
+    /* color: #fff; */
+}
+.brand-title,
+.nav-menu .nav-menu-list li a {
+    text-align: center;
+    color:rgb(11, 82, 82);
+}
+
+.container {
+    height: 100vh;
+
+}
+section {
+    padding: 1.3rem 1rem 0 1rem;
+}
+
+footer {
+    background-image: linear-gradient(rgb(27, 44, 44),rgb(27, 68, 68));
+}
